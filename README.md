@@ -1,6 +1,6 @@
-# MP07, Sprint 1, exercice 2
+# MP09, Sprint 1, exercice 1
 
-## Calculator backend
+## Calculator frontend
 
 Run using `docker-compose up`
 
