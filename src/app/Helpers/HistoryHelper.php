@@ -13,7 +13,7 @@ class HistoryHelper {
         echo '<div class="history">';
         echo '<h2>Historial de operaciones</h2>';
         if (empty($history)) {
-            echo "No existen resultados en el historial";
+            echo "No hay operaciones registradas en el historial";
             echo '</div>';
             return;
         }
@@ -26,7 +26,7 @@ class HistoryHelper {
             }
         }
         if ($history_count == 0) {
-            echo "No existen resultados en el historial";
+            echo "No hay operaciones registradas en el historial";
         }
         echo '</div>';
     }
