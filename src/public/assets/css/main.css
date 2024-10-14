@@ -215,7 +215,6 @@ footer {
 
 /* Modal styles */
 
-/* Modal wrapper */
 #history-modal-wrapper {
     position: fixed;
     z-index: 999;
@@ -229,7 +228,6 @@ footer {
     align-items: center;
 }
 
-/* Modal content */
 #history-modal {    
     background-color: #222;
     color: #eee;
@@ -241,7 +239,6 @@ footer {
     position: relative;
 }
 
-/* Close button */
 #history-modal .close {
     position: absolute;
     top: 10px;
@@ -251,12 +248,10 @@ footer {
     cursor: pointer;
 }
 
-/* Close button hover effect */
 #history-modal .close:hover {
     color: #007bff;
 }
 
-/* History content */
 #history h2 {
     margin-bottom: 20px;
 }
