@@ -7,6 +7,12 @@
  * Function to destroy a session (General function)
  */
 
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.href.includes('#session-destroyed')) {
+        alert("Sesión eliminada correctamente");
+    }
+});
+
 function destroySession() {
     fetch('/destroy-session', {
         method: 'POST'
@@ -41,9 +47,35 @@ function onSubmitNumeric(event) {
 
 /* ======= String calculator functions ======= */
 
+function submitStringForm(type) {
+    var form = document.getElementById('string-calculator-form');
+    var stringElement = document.getElementById('string');
+    var string2Element = document.getElementById('string2');
+    var concatElement = document.getElementById('concat');
+    var removeElement = document.getElementById('remove');
+    if(type == 'concat') concatElement.checked = true;
+    else removeElement.checked = true;
+    if (stringElement.value == '' || string2Element.value == '') {
+        alert('Los campos de texto no pueden estar vacíos');
+        return;
+    }
+    form.submit();
+}
+
 function onSubmitString(event) {
     event.preventDefault();
     var form = document.getElementById('string-calculator-form');
-    console.log(form);
     form.submit();
+}
+
+/* ======= History modal functions ======= */
+
+function openHistoryModal() {
+    var historyModalWrapperElement = document.getElementById('history-modal-wrapper');
+    historyModalWrapperElement.classList.remove('hidden');
+}
+
+function closeHistoryModal() {
+    var historyModalWrapperElement = document.getElementById('history-modal-wrapper');
+    historyModalWrapperElement.classList.add('hidden');
 }
