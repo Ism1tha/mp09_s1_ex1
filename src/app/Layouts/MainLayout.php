@@ -23,7 +23,7 @@
         <?= $content ?>
     </div>
     <footer>
-        <p>Método usado para el factorial: <?= $_ENV['CALCULATOR_NUMERIC_FACTORIAL_METHOD'] == 0 ? 'Recursivo' : 'Iterativo' ?></p>
+        <p>Método factorial: <?= $_ENV['CALCULATOR_NUMERIC_FACTORIAL_METHOD'] == 0 ? 'Recursivo' : 'Iterativo' ?></p>
         <p>© <?= date('Y') ?> - <?= $_ENV['APP_NAME'] ?> - <?= $_ENV['APP_AUTHOR'] ?></p>
     </footer>
 </body>
