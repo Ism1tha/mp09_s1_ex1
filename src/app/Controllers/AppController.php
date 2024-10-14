@@ -15,7 +15,7 @@ class AppController {
     /* Mètode per retornar la vista de la calculadora de strings */
     function destroySession() {
         Session::destroy();
-        http_response_code(200);
+        header('Location: /#session-destroyed');
     }
     
 }

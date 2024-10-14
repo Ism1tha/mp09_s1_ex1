@@ -11,9 +11,10 @@ class HistoryHelper {
         $history = Session::get('history');
         $history_count = 0;
         echo '<div class="history">';
-        echo '<h2>Historial de calculos</h2>';
+        echo '<h2>Historial de operaciones</h2>';
         if (empty($history)) {
             echo "No existen resultados en el historial";
+            echo '</div>';
             return;
         }
         foreach ($history as $result) {

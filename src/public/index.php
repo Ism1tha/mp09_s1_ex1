@@ -29,7 +29,7 @@ $router->add('/numeric-calculator', NumericCalculatorController::class, 'index',
 $router->add('/numeric-calculator', NumericCalculatorController::class, 'calculate', 'POST');
 $router->add('/string-calculator', StringCalculatorController::class, 'index', 'GET');
 $router->add('/string-calculator', StringCalculatorController::class, 'calculate', 'POST');
-$router->add('/destroy-session', AppController::class, 'destroySession', 'POST');
+$router->add('/destroy-session', AppController::class, 'destroySession', 'GET');
 
 
 /* Processem la ruta actual utilitzant l'enrutador */

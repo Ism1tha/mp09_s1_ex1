@@ -8,7 +8,7 @@ use App\Helpers\HistoryHelper;
 <form id="numeric-calculator-form" method="POST" onsubmit="onSubmitNumeric(event)">
     <!-- Input for expression -->
     <input type="text" id="expression" name="expression" placeholder="Introduzca una expresión" required
-        autocomplete="off" autofocus readonly>
+        autocomplete="off" autofocus>
     <!-- Grid template for buttons -->
     <div class="grid-container">
         <button type="button" onclick="addElementToNumericExpression('1')">1</button>
@@ -31,8 +31,11 @@ use App\Helpers\HistoryHelper;
         <button type="button" onclick="addElementToNumericExpression('^')">^</button>
         <button type="button" onclick="addElementToNumericExpression('!')">!</button>
     </div>
-    <button type="submit">Calcular</button>
-    <button type="reset">Limpiar</button>
+    <div class="action-container">
+        <button type="submit">Calcular</button>
+        <button type="reset">Limpiar</button>
+        <button type="button" onclick="openHistoryModal()">Ver historial</button>
+    </div>
 </form>
 <!-- Result -->
 <?php if($request['request_method'] == 'POST'): ?>
@@ -43,7 +46,12 @@ use App\Helpers\HistoryHelper;
         </p>
     </div>
 <?php endif; ?>
-
+<!-- History modal -->
+<div id="history-modal-wrapper" class="hidden">
+    <div id="history-modal">
+        <span class="close" onclick="closeHistoryModal()">&times;</span>
+        <?php HistoryHelper::renderHistory(1); ?>
+    </div>
+</div>
 <?php
-HistoryHelper::renderHistory(1);
 ?>
